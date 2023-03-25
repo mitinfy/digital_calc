@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 12px;
+  cursor: pointer;
+border-radius:5px 5px 5px 5px;
+font-weight:bold; font-size:12pt;
+}
+
+.success {background-color: #4CAF50;} 
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} 
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} 
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} 
+.danger:hover {background: #da190b;}
+
+#tx{border-radius:5px 5px 5px 5px; background:white; padding:12px 20px; font-weight:bold; font-size:12pt;}
+#bg{background:gray;}
+}
+</style>
+
+<script language="javascript">
+function calc(ch)
+{
+if(ch=="=")
+{
+document.f1.t1.value=eval(document.f1.t1.value)
+}
+else
+{
+if(ch=="C")
+{
+document.f1.t1.value=""
+}
+else
+{
+document.f1.t1.value+=ch
+}
+}
+}
+</script></head>
+<body>
+<center>
+<h2> DIGITAL  CALCULATOR App Using JavaScript</h2> <hr>
+<form name=f1>
+<table border=2 cellspacing=6 cellpadding=6 id="bg">
+<td colspan=4 align=center><input type=text name=t1 size=26 id="tx"> <br>
+<tr>
+<td><input type=button value="7" onClick="calc('7')" class="btn info">
+<td> <input type=button value="8" onClick="calc('8')" class="btn info">
+<td> <input type=button value="9" onClick="calc('9')" class="btn info">
+<td> <input type=button value="*" onClick="calc('*')" class="btn warning">
+</tr>
+
+<tr>
+<td> <input type=button value="4" onClick="calc('4')" class="btn info">
+<td> <input type=button value="5" onClick="calc('5')" class="btn info">
+<td> <input type=button value="6" onClick="calc('6')" class="btn info">
+<td> <input type=button value="/" onClick="calc('/')" class="btn warning">
+</tr>
+
+<tr>
+<td> <input type=button value="1" onClick="calc('1')" class="btn info">
+<td> <input type=button value="2" onClick="calc('2')" class="btn info">
+<td> <input type=button value="3" onClick="calc('3')" class="btn info">
+<td> <input type=button value="-" onClick="calc('-')" class="btn warning">
+</tr>
+
+<tr>
+<td> <input type=button value="0" onClick="calc('0')" class="btn info">
+<td> <input type=button value="C" onClick="calc('C')" class="btn danger">
+<td> <input type=button value="=" onClick="calc('=')" class="btn success">
+<td> <input type=button value="+" onClick="calc('+')" class="btn warning">
+</tr>
+</table></form>
+ <hr>
+<h3> by MIT India </h3>
+</body></html>
